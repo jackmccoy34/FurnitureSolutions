@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace FurnitureSolutions.Models
 {
-    public class ProductListItem
+    public class ProductCreate
     {
-        public int ProductId { get; set; }
+        /*[Required]*/
         public string ProductName { get; set; }
         public string FurnitureType { get; set; }
         public decimal Price { get; set; }

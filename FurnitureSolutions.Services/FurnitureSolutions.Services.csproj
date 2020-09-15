@@ -54,11 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ProductService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FurnitureSolutions.Data\FurnitureSolutions.Data.csproj">
+      <Project>{4c844618-817c-40ef-8d90-239b6de82e1f}</Project>
+      <Name>FurnitureSolutions.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FurnitureSolutions.Models\FurnitureSolutions.Models.csproj">
+      <Project>{7eb7288d-9745-4241-a6db-3f3b5c45e0c3}</Project>
+      <Name>FurnitureSolutions.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
