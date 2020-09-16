@@ -1,0 +1,42 @@
+﻿@model FurnitureSolutions.Models.SalesRepDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SalesRepDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RepId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Territory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Territory)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RepId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -9,6 +9,7 @@ namespace FurnitureSolutions.Models
     public class ProductCreate
     {
         /*[Required]*/
+        public string ProductId { get; set; }
         public string ProductName { get; set; }
         public string FurnitureType { get; set; }
         public decimal Price { get; set; }
