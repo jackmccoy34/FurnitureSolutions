@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FurnitureSolutions.Models",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FurnitureSolutions.Services", "FurnitureSolutions.Services\FurnitureSolutions.Services.csproj", "{CC05545C-2715-43F9-B6ED-A6FB7A3261E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FurnitureSolutions.WebAPI", "FunritureSolutions.WebAPI\FurnitureSolutions.WebAPI.csproj", "{227FCD4B-AE64-4866-980E-8E0EF822D5E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{CC05545C-2715-43F9-B6ED-A6FB7A3261E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC05545C-2715-43F9-B6ED-A6FB7A3261E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC05545C-2715-43F9-B6ED-A6FB7A3261E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{227FCD4B-AE64-4866-980E-8E0EF822D5E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{227FCD4B-AE64-4866-980E-8E0EF822D5E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{227FCD4B-AE64-4866-980E-8E0EF822D5E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{227FCD4B-AE64-4866-980E-8E0EF822D5E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

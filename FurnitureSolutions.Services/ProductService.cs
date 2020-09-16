@@ -53,5 +53,55 @@ namespace FurnitureSolutions.Services
                 return query.ToArray();
             }
         }
+
+        public ProductDetail GetProductById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Products
+                        .Single(e => e.ProductId == id);
+                return
+                    new ProductDetail
+                    {
+                        ProductId = entity.ProductId,
+                        ProductName = entity.ProductName,
+                        FurnitureType = entity.FurnitureType,
+                        Price = entity.Price,
+                    };
+            }
+        }
+
+        public bool EditProduct(ProductEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Products
+                        .Single(e => e.ProductId == model.ProductId);
+                entity.ProductName = model.ProductName;
+                entity.FurnitureType = model.FurnitureType;
+                entity.Price = model.Price;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteProduct(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Products
+                        .Single(e => e.ProductId == id);
+
+                ctx.Products.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }
