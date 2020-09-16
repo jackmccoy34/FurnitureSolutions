@@ -41,6 +41,7 @@ namespace FurnitureSolutions.Data
 
         public DbSet<Product> Products { get; set; }
         public DbSet<SalesRep> SalesReps { get; set; }
+        public DbSet<Customer> Customers { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

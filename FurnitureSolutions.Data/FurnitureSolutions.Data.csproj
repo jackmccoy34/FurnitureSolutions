@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customer.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Migrations\202009151726357_InitialCreate.cs" />
     <Compile Include="Migrations\202009151726357_InitialCreate.Designer.cs">
@@ -66,6 +67,10 @@
     <Compile Include="Migrations\202009161715364_SalesRep2.cs" />
     <Compile Include="Migrations\202009161715364_SalesRep2.Designer.cs">
       <DependentUpon>202009161715364_SalesRep2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009161855542_Customer.cs" />
+    <Compile Include="Migrations\202009161855542_Customer.Designer.cs">
+      <DependentUpon>202009161855542_Customer.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Product.cs" />
@@ -85,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202009161715364_SalesRep2.resx">
       <DependentUpon>202009161715364_SalesRep2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009161855542_Customer.resx">
+      <DependentUpon>202009161855542_Customer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
