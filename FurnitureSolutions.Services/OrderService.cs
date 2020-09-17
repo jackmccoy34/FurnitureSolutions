@@ -22,11 +22,13 @@ namespace FurnitureSolutions.Services
             var entity =
                 new Order()
                 {
+                    UserId = _userId,
                     Quantity = model.Quantity,
                     TotalPrice = model.TotalPrice,
                     CustomerId = model.CustomerId,
                     RepId = model.RepId,
-                    ProductId = model.ProductId
+                    ProductId = model.ProductId,
+                    DeliveryDate = model.DeliveryDate
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -43,14 +45,16 @@ namespace FurnitureSolutions.Services
                 var query =
                     ctx
                         .Orders
+                        .Where(e=> e.UserId == _userId)
                         .Select(e => new OrderListItem
                         {
                             OrderId = e.OrderId,
                             Quantity = e.Quantity,
                             TotalPrice = e.TotalPrice,
-                            Product = e.Product,
-                            Customer = e.Customer,
-                            SalesRep = e.SalesRep
+                            ProductId = e.ProductId,
+                            CustomerId = e.CustomerId,
+                            RepId = e.RepId,
+                            DeliveryDate = e.DeliveryDate
                         });
                 return query.ToArray();
             }
@@ -63,16 +67,17 @@ namespace FurnitureSolutions.Services
                 var entity =
                     ctx
                         .Orders
-                        .Single(e => e.OrderId == id);
+                        .Single(e => e.OrderId == id && e.UserId == _userId);
                 return
                     new OrderDetail
                     {
                         OrderId = entity.OrderId,
                         Quantity = entity.Quantity,
                         TotalPrice = entity.TotalPrice,
-                        Product = entity.Product,
-                        Customer = entity.Customer,
-                        SalesRep = entity.SalesRep
+                        ProductId = entity.ProductId,
+                        CustomerId = entity.CustomerId,
+                        RepId = entity.RepId,
+                        DeliveryDate = entity.DeliveryDate
                     };
             }
         }
@@ -84,12 +89,13 @@ namespace FurnitureSolutions.Services
                 var entity =
                     ctx
                         .Orders
-                        .Single(e => e.OrderId == model.OrderId);
+                        .Single(e => e.OrderId == model.OrderId && e.UserId == _userId);
                 entity.CustomerId = model.CustomerId;
                 entity.ProductId = model.ProductId;
                 entity.RepId = model.RepId;
                 entity.Quantity = model.Quantity;
                 entity.TotalPrice = model.TotalPrice;
+                entity.DeliveryDate = model.DeliveryDate;
 
                 return ctx.SaveChanges() == 1;
             }
@@ -102,7 +108,7 @@ namespace FurnitureSolutions.Services
                 var entity =
                     ctx
                         .Orders
-                        .Single(e => e.OrderId == id);
+                        .Single(e => e.OrderId == id && e.UserId == _userId);
 
                 ctx.Orders.Remove(entity);
 

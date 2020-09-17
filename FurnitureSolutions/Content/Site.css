@@ -5,7 +5,7 @@
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
+    padding-left: 30px;
     padding-right: 15px;
 }
 
@@ -21,4 +21,33 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+ul {
+    list-style-type: upper-alpha;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left
+}
+
+li a {
+    display: block;
+    color: wheat;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: solid;
+}
+
+li a:hover:not(.active){
+    background-color: #333;
+}
+
+.active {
+    background-color: #4CAF50
+
 }

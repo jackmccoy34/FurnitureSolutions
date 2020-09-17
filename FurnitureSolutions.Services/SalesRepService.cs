@@ -22,7 +22,6 @@ namespace FurnitureSolutions.Services
             var entity =
                 new SalesRep()
                 {
-                    UserId = _userId,
                     RepName = model.RepName,
                     Territory = model.Territory,
                 };
@@ -41,7 +40,6 @@ namespace FurnitureSolutions.Services
                 var query =
                     ctx
                         .SalesReps
-                        .Where(e => e.UserId == _userId)
                         .Select(
                             e =>
                                 new SalesRepListItem
@@ -63,7 +61,7 @@ namespace FurnitureSolutions.Services
                 var entity =
                     ctx
                         .SalesReps
-                        .Single(e => e.RepId == id && e.UserId == _userId);
+                        .Single(e => e.RepId == id);
                 return
                     new SalesRepDetail
                     {
@@ -81,7 +79,7 @@ namespace FurnitureSolutions.Services
                 var entity =
                     ctx
                         .SalesReps
-                        .Single(e => e.RepId == model.RepId && e.UserId == _userId);
+                        .Single(e => e.RepId == model.RepId);
 
                 entity.RepName = model.RepName;
                 entity.Territory = model.Territory;
@@ -96,7 +94,7 @@ namespace FurnitureSolutions.Services
                 var entity =
                     ctx
                         .SalesReps
-                        .Single(e => e.RepId == repId && e.UserId == _userId);
+                        .Single(e => e.RepId == repId);
 
                 ctx.SalesReps.Remove(entity);
 

@@ -10,7 +10,7 @@ namespace FurnitureSolutions.Models
     {
         public int Quantity { get; set; }
         public decimal TotalPrice { get; set; }
-        public DateTime DeliveryDate { get; set; }
+        public string DeliveryDate { get; set; }
         public int CustomerId { get; set; }
         public int ProductId { get; set; }
         public int RepId { get; set; }

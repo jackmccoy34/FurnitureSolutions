@@ -10,14 +10,11 @@ namespace FurnitureSolutions.Models
     public class OrderDetail
     {
         public int OrderId { get; set; }
+        public int Quantity { get; set; }
+        public decimal TotalPrice { get; set; }
+        public string DeliveryDate { get; set; }
         public int CustomerId { get; set; }
         public int ProductId { get; set; }
         public int RepId { get; set; }
-        public int Quantity { get; set; }
-        public decimal TotalPrice { get; set; }
-        public DateTime DeliveryDate { get; set; }
-        public virtual Customer Customer { get; set; }
-        public virtual Product Product { get; set; }
-        public virtual SalesRep SalesRep { get; set; }
     }
 }

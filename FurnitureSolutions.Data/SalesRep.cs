@@ -11,8 +11,6 @@ namespace FurnitureSolutions.Data
     {
         [Key]
         public int RepId { get; set; }
-        [Required]
-        public Guid UserId { get; set; }
         public string RepName { get; set; }
         public string Territory { get; set; }
     }

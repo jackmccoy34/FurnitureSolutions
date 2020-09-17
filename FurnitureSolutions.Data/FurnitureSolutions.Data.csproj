@@ -76,6 +76,38 @@
     <Compile Include="Migrations\202009162040116_Order.Designer.cs">
       <DependentUpon>202009162040116_Order.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009162140537_OrderChange.cs" />
+    <Compile Include="Migrations\202009162140537_OrderChange.Designer.cs">
+      <DependentUpon>202009162140537_OrderChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009162216519_OrderChange2.cs" />
+    <Compile Include="Migrations\202009162216519_OrderChange2.Designer.cs">
+      <DependentUpon>202009162216519_OrderChange2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009162244259_OrderChange3.cs" />
+    <Compile Include="Migrations\202009162244259_OrderChange3.Designer.cs">
+      <DependentUpon>202009162244259_OrderChange3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009162256453_OrderChange4.cs" />
+    <Compile Include="Migrations\202009162256453_OrderChange4.Designer.cs">
+      <DependentUpon>202009162256453_OrderChange4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009162301162_DeletedDatabase.cs" />
+    <Compile Include="Migrations\202009162301162_DeletedDatabase.Designer.cs">
+      <DependentUpon>202009162301162_DeletedDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009170001471_AddDatabase.cs" />
+    <Compile Include="Migrations\202009170001471_AddDatabase.Designer.cs">
+      <DependentUpon>202009170001471_AddDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009170005552_AddDatabase2.cs" />
+    <Compile Include="Migrations\202009170005552_AddDatabase2.Designer.cs">
+      <DependentUpon>202009170005552_AddDatabase2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009170216111_AddDatabase3.cs" />
+    <Compile Include="Migrations\202009170216111_AddDatabase3.Designer.cs">
+      <DependentUpon>202009170216111_AddDatabase3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Product.cs" />
@@ -101,6 +133,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202009162040116_Order.resx">
       <DependentUpon>202009162040116_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009162140537_OrderChange.resx">
+      <DependentUpon>202009162140537_OrderChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009162216519_OrderChange2.resx">
+      <DependentUpon>202009162216519_OrderChange2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009162244259_OrderChange3.resx">
+      <DependentUpon>202009162244259_OrderChange3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009162256453_OrderChange4.resx">
+      <DependentUpon>202009162256453_OrderChange4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009162301162_DeletedDatabase.resx">
+      <DependentUpon>202009162301162_DeletedDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009170001471_AddDatabase.resx">
+      <DependentUpon>202009170001471_AddDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009170005552_AddDatabase2.resx">
+      <DependentUpon>202009170005552_AddDatabase2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009170216111_AddDatabase3.resx">
+      <DependentUpon>202009170216111_AddDatabase3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
